@@ -1,0 +1,276 @@
+[gd_scene load_steps=60 format=3 uid="uid://bgh65hai8rb3y"]
+
+[ext_resource type="PackedScene" uid="uid://kvt7bdbcx8n0" path="res://Scenes/dynamic_object.tscn" id="1_mrsce"]
+[ext_resource type="Texture2D" uid="uid://c4a7mb2u12vq5" path="res://Graphics/Environnement/Objets/Skeleton Plush/Dancing/Plush_Skeleton_Dancing-1.png" id="2_omolw"]
+[ext_resource type="Texture2D" uid="uid://bafmwyl66fd7g" path="res://Graphics/Environnement/Objets/Skeleton Plush/Dancing/Plush_Skeleton_Dancing-2.png" id="3_3fs10"]
+[ext_resource type="Texture2D" uid="uid://cmcl4vuo1ryi2" path="res://Graphics/Environnement/Objets/Skeleton Plush/Dancing/Plush_Skeleton_Dancing-3.png" id="4_e018e"]
+[ext_resource type="Texture2D" uid="uid://wtbbuxna75uu" path="res://Graphics/Environnement/Objets/Skeleton Plush/Dancing/Plush_Skeleton_Dancing-4.png" id="5_ahx62"]
+[ext_resource type="Texture2D" uid="uid://cf4xs33s353x0" path="res://Graphics/Environnement/Objets/Skeleton Plush/Detected/Plush_Skeleton_Detected-1.png" id="6_8q0fe"]
+[ext_resource type="Texture2D" uid="uid://7i5px6i64c6w" path="res://Graphics/Environnement/Objets/Skeleton Plush/Detected/Plush_Skeleton_Detected-2.png" id="7_wpqub"]
+[ext_resource type="Texture2D" uid="uid://dik72j1pqnfog" path="res://Graphics/Environnement/Objets/Skeleton Plush/Detected/Plush_Skeleton_Detected-3.png" id="8_ovsvd"]
+[ext_resource type="Texture2D" uid="uid://bj3l824i5uq2y" path="res://Graphics/Environnement/Objets/Skeleton Plush/Detected/Plush_Skeleton_Detected-4.png" id="9_qv74w"]
+[ext_resource type="Texture2D" uid="uid://bxcr6hllnhi7j" path="res://Graphics/Environnement/Objets/Skeleton Plush/Detected/Plush_Skeleton_Detected-5.png" id="10_kbxg7"]
+[ext_resource type="Texture2D" uid="uid://en3py1gwbg1i" path="res://Graphics/Environnement/Objets/Skeleton Plush/Detected/Plush_Skeleton_Detected-6.png" id="11_8vukw"]
+[ext_resource type="Texture2D" uid="uid://dpygei0crrs4w" path="res://Graphics/Environnement/Objets/Skeleton Plush/Detected/Plush_Skeleton_Detected-7.png" id="12_er7um"]
+[ext_resource type="Texture2D" uid="uid://ov4ajs1knlg8" path="res://Graphics/Environnement/Objets/Skeleton Plush/Detected/Plush_Skeleton_Detected-8.png" id="13_10w53"]
+[ext_resource type="Texture2D" uid="uid://dopfffavanyyw" path="res://Graphics/Environnement/Objets/Skeleton Plush/Detected/Plush_Skeleton_Detected-9.png" id="14_s5ji0"]
+[ext_resource type="Texture2D" uid="uid://cna670kmdyak8" path="res://Graphics/Environnement/Objets/Skeleton Plush/Detected/Plush_Skeleton_Detected-10.png" id="15_im3mw"]
+[ext_resource type="Texture2D" uid="uid://bb4mhbc5hqji6" path="res://Graphics/Environnement/Objets/Skeleton Plush/Detected/Plush_Skeleton_Detected-11.png" id="16_owg8u"]
+[ext_resource type="Texture2D" uid="uid://bxrutgvwsh2kq" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-1.png" id="17_fbxlq"]
+[ext_resource type="Texture2D" uid="uid://6ojgpqr4n386" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-2.png" id="18_l4xr2"]
+[ext_resource type="Texture2D" uid="uid://bu11kajuhguah" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-3.png" id="19_4lq0m"]
+[ext_resource type="Texture2D" uid="uid://cvlg6rrstuuh6" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-4.png" id="20_hr13b"]
+[ext_resource type="Texture2D" uid="uid://035x52c0mdin" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-5.png" id="21_wcb27"]
+[ext_resource type="Texture2D" uid="uid://5jg01h3u8g0e" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-6.png" id="22_1dr3n"]
+[ext_resource type="Texture2D" uid="uid://ce80mndfigwro" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-7.png" id="23_y5628"]
+[ext_resource type="Texture2D" uid="uid://fvfwl2ec0f3a" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-8.png" id="24_s2lcc"]
+[ext_resource type="Texture2D" uid="uid://t7bujjo2etpy" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-9.png" id="25_bqd2x"]
+[ext_resource type="Texture2D" uid="uid://cad4tdjst4waw" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-10.png" id="26_5bhng"]
+[ext_resource type="Texture2D" uid="uid://djctky5pdkbqi" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-11.png" id="27_li11a"]
+[ext_resource type="Texture2D" uid="uid://4ksgn76y848i" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-12.png" id="28_52uxy"]
+[ext_resource type="Texture2D" uid="uid://ce2dyognyp8jk" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-13.png" id="29_auaj8"]
+[ext_resource type="Texture2D" uid="uid://2ld3mv4lbtm0" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-14.png" id="30_rsj36"]
+[ext_resource type="Texture2D" uid="uid://c08kul70xt3c5" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-15.png" id="31_fotsb"]
+[ext_resource type="Texture2D" uid="uid://cpue6lxm0j8qn" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-16.png" id="32_ohx4t"]
+[ext_resource type="Texture2D" uid="uid://c6bs4vosgn0qh" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-17.png" id="33_c3i7u"]
+[ext_resource type="Texture2D" uid="uid://cugsgtnxgxibf" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-18.png" id="34_7nsue"]
+[ext_resource type="Texture2D" uid="uid://c7skkqsdeonqa" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-19.png" id="35_802i6"]
+[ext_resource type="Texture2D" uid="uid://bc3qo8ltd4gdd" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-20.png" id="36_lmr1w"]
+[ext_resource type="Texture2D" uid="uid://cdftkm0loyod3" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-21.png" id="37_0cda4"]
+[ext_resource type="Texture2D" uid="uid://b5nmhpx4m7358" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-22.png" id="38_qmwa3"]
+[ext_resource type="Texture2D" uid="uid://d1k8twfyvkik8" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-23.png" id="39_g47wl"]
+[ext_resource type="Texture2D" uid="uid://w5xa5wdahrg5" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-24.png" id="40_odjcx"]
+[ext_resource type="Texture2D" uid="uid://b4wik3u0srsyj" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-25.png" id="41_eqqnq"]
+[ext_resource type="Texture2D" uid="uid://c3s4wwngq45nc" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-26.png" id="42_rrsua"]
+[ext_resource type="Texture2D" uid="uid://cio28fewfvhcf" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-27.png" id="43_8nspw"]
+[ext_resource type="Texture2D" uid="uid://behaeaxbefacc" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-28.png" id="44_k8vhy"]
+[ext_resource type="Texture2D" uid="uid://c3k1tfkhdbou8" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-29.png" id="45_m8dl0"]
+[ext_resource type="Texture2D" uid="uid://cib80lssyqjky" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-30.png" id="46_gmoaq"]
+[ext_resource type="Texture2D" uid="uid://ctxueg3c2ro6o" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-31.png" id="47_1r1fy"]
+[ext_resource type="Texture2D" uid="uid://br8psyrycgfl8" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-32.png" id="48_nyplx"]
+[ext_resource type="Texture2D" uid="uid://cwduwiscumsav" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-33.png" id="49_ptqkx"]
+[ext_resource type="Texture2D" uid="uid://depreqmhjtoqx" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-34.png" id="50_3v481"]
+[ext_resource type="Texture2D" uid="uid://ch5873ocwwa7s" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-35.png" id="51_lsvn8"]
+[ext_resource type="Texture2D" uid="uid://dythaor1ro53u" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-36.png" id="52_21sc1"]
+[ext_resource type="Texture2D" uid="uid://7ayaqad7yelh" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-37.png" id="53_l3rci"]
+[ext_resource type="Texture2D" uid="uid://fvi2plu51tyh" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-38.png" id="54_q3dmu"]
+[ext_resource type="Texture2D" uid="uid://3poyd056ciuu" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-39.png" id="55_4wbuv"]
+[ext_resource type="Texture2D" uid="uid://cj0vch0nfbyga" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-40.png" id="56_uaoc8"]
+[ext_resource type="Texture2D" uid="uid://jausmflmam8e" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-41.png" id="57_avfwv"]
+[ext_resource type="Texture2D" uid="uid://bjopup6fw4ws0" path="res://Graphics/Environnement/Objets/Skeleton Plush/Getting Up/Plush_Skeleton_Getting_Up-42.png" id="58_884nf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1f13l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_omolw")
+}, {
+"duration": 4.0,
+"texture": ExtResource("3_3fs10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_e018e")
+}, {
+"duration": 4.0,
+"texture": ExtResource("5_ahx62")
+}],
+"loop": true,
+"name": &"Dancing",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_8q0fe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wpqub")
+}, {
+"duration": 4.0,
+"texture": ExtResource("8_ovsvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qv74w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kbxg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8vukw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_er7um")
+}, {
+"duration": 2.0,
+"texture": ExtResource("13_10w53")
+}, {
+"duration": 2.0,
+"texture": ExtResource("14_s5ji0")
+}, {
+"duration": 2.0,
+"texture": ExtResource("15_im3mw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_owg8u")
+}],
+"loop": false,
+"name": &"Detected",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_fbxlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_l4xr2")
+}, {
+"duration": 3.0,
+"texture": ExtResource("19_4lq0m")
+}, {
+"duration": 2.0,
+"texture": ExtResource("20_hr13b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_wcb27")
+}, {
+"duration": 4.0,
+"texture": ExtResource("22_1dr3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_y5628")
+}, {
+"duration": 4.0,
+"texture": ExtResource("24_s2lcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_bqd2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_5bhng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_li11a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_52uxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_auaj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_rsj36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_fotsb")
+}, {
+"duration": 5.0,
+"texture": ExtResource("32_ohx4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_c3i7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_7nsue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_802i6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_lmr1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_0cda4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_qmwa3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_g47wl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_odjcx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_eqqnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_rrsua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_8nspw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_k8vhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_m8dl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_gmoaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_1r1fy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_nyplx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_ptqkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_3v481")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_lsvn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_21sc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_l3rci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_q3dmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_4wbuv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_uaoc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_avfwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_884nf")
+}],
+"loop": false,
+"name": &"Getting Up",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_fbxlq")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="SkeletonPlush" instance=ExtResource("1_mrsce")]
+vision_behaviour_enabled = true
+seen_animation = "Detected"
+unseen_animation_intro = "Getting Up"
+unseen_animation = "Dancing"
+activate_after_unseen = true
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_1f13l")
+animation = &"Getting Up"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" parent="." index="1"]
+disabled = true
+
+[node name="CollisionShape2D" parent="VisionDetector" index="0"]
+visible = false
+position = Vector2(21, 7)

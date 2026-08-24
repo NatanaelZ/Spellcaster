@@ -1,0 +1,12 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dyrs0us7w7d2b"]
+
+[ext_resource type="Texture2D" uid="uid://b80y1841boshb" path="res://Graphics/Environnement/Sols/Woodfloor/Plancher.png" id="1_5eed4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6xgx5"]
+texture = ExtResource("1_5eed4")
+texture_region_size = Vector2i(1206, 1206)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(1206, 1206)
+sources/0 = SubResource("TileSetAtlasSource_6xgx5")
