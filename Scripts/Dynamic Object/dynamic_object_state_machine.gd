@@ -4,7 +4,7 @@ extends Node
 signal endofactions
 
 
-var states: Array[DynamicObjectState]
+@export var states: Array[DynamicObjectState]
 var initial_state_name : String
 var prev_state : DynamicObjectState
 var curr_state : DynamicObjectState
@@ -13,7 +13,7 @@ var n_actions : int
 var n_actions_ended : int
 
 func _ready():
-	seen_unseen = get_parent().get_node("SeenUnseenBehavior")
+	seen_unseen = get_parent().get_component("SeenUnseenBehavior")
 	seen_unseen.seen.connect(_on_seen)
 	seen_unseen.unseen.connect(_on_unseen)
 	endofactions.connect(_on_endofactions)

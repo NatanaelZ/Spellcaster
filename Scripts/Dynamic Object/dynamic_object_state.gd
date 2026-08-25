@@ -1,6 +1,6 @@
 class_name DynamicObjectState
 extends Resource
 
-var name: String
-var triggers : Array[DynamicObjectTrigger]
-var actions : Array[DynamicObjectAction]
+@export var name: String
+@export var triggers : Array[DynamicObjectTrigger]
+@export var actions : Array[DynamicObjectAction]

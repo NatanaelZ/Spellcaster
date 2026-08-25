@@ -10,5 +10,4 @@ static func extract_animations(node: Node) -> PackedStringArray:
 	if anims.size() == 1 and anims[0] == "default":
 		return []
 	
-	
 	return anims

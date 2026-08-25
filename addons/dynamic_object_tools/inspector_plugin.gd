@@ -2,26 +2,36 @@
 extends EditorInspectorPlugin
 
 var toggles: Dictionary = {}
+var machine_state: DynamicObjectStateMachine
 	
 func _can_handle(object: Object) -> bool:
-	return object is DynamicObject
+	if object is PlayAnimationAction : 
+		var selected_nodes = EditorInterface.get_selection().get_selected_nodes()
+		if (selected_nodes.size() == 1 && selected_nodes[0] is DynamicObjectStateMachine) :
+			machine_state = selected_nodes[0]
+			return true
+	return false
+
 
 func _parse_property(object: Object, type: Variant.Type, name: String, hint: PropertyHint, hint_string: String, usage: int, wide: bool) -> bool:
 	
-	if name == "vision_behaviour_enabled":
-		var visionToggle = DotGroupToggle.new(object, "vision_behaviour_enabled", "Vision Behaviour", "Vision Behaviour")
-		add_property_editor(name, visionToggle)
-		toggles[name] = visionToggle
-		return true
+	# if name == "vision_behaviour_enabled":
+	# 	var visionToggle = DotGroupToggle.new(object, "vision_behaviour_enabled", "Vision Behaviour", "Vision Behaviour")
+	# 	add_property_editor(name, visionToggle)
+	# 	toggles[name] = visionToggle
+	# 	return true
 	
-	for toggle_prop in toggles:
-		if not object.get(toggle_prop):
-			var toggle = toggles[toggle_prop]
-			if name in toggle.get_group_properties():
-				return true
+	# for toggle_prop in toggles:
+	# 	if not object.get(toggle_prop):
+	# 		var toggle = toggles[toggle_prop]
+	# 		if name in toggle.get_group_properties():
+	# 			return true
 	
-	if name in ["seen_animation", "unseen_animation", "seen_animation_intro", "unseen_animation_intro"]:
-		add_property_editor(name, DotChildPropertiesDropdown.new(object, "AnimatedSprite2D", DotExtractors.extract_animations))
+	if name == "animation_name":
+		print("in")
+		var animated_sprite = machine_state.get_parent().get_component("AnimatedSprite2D")
+		var animations = DotExtractors.extract_animations(animated_sprite)
+		add_property_editor(name, CustomPropertyDropdown.new(object, animations))
 		return true
 	return false
 

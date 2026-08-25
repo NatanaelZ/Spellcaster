@@ -1,4 +1,4 @@
-class_name ActionPlayAnimation
+class_name PlayAnimationAction
 extends DynamicObjectAction
 
 @export var animation_name : String = ""
