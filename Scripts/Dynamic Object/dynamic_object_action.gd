@@ -1,10 +1,10 @@
 class_name DynamicObjectAction
-extends Node
+extends Resource
 
 # commentaire test
 signal end_of_action
 
-func play_action() :
+func play_action(_dynamic_object: DynamicObject) :
 	return  
 
 func set_end_of_action():

@@ -47,13 +47,12 @@ func _set_curr_state():
 
 
 func _set_actions():
-
 	n_actions=0
 	n_actions_ended=0
 	var actions = curr_state.actions
 	for action in actions :
 		n_actions+=1
-		action.play_action()
+		action.play_action(get_parent())
 
 
 func _on_end_of_action() :
