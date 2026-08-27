@@ -1,28 +1,38 @@
-[gd_scene load_steps=15 format=3 uid="uid://kvt7bdbcx8n0"]
+[gd_scene load_steps=17 format=3 uid="uid://kvt7bdbcx8n0"]
 
 [ext_resource type="Script" uid="uid://ceqhp86tbop0t" path="res://Scripts/Dynamic Object/dynamic_object.gd" id="1_d23p1"]
 [ext_resource type="Script" uid="uid://n4nfgj743ug7" path="res://Scripts/Dynamic Object/seen_unseen_behavior.gd" id="2_c2ew0"]
 [ext_resource type="Script" uid="uid://cp87xlut4uxlc" path="res://Scripts/Dynamic Object/dynamic_object_state_machine.gd" id="2_k7dj1"]
 [ext_resource type="Script" uid="uid://vbad887e416a" path="res://Scripts/Dynamic Object/dynamic_object_state.gd" id="3_846hx"]
 [ext_resource type="Script" uid="uid://c8kki56hu6l2i" path="res://Scripts/Dynamic Object/vision_detector.gd" id="3_k7dj1"]
-[ext_resource type="Script" uid="uid://can5okhlrlpxg" path="res://Scripts/Dynamic Object/dynamic_object_action.gd" id="4_27sub"]
-[ext_resource type="Script" uid="uid://dcql54jt4ppmt" path="res://Scripts/Dynamic Object/play_animation_action.gd" id="5_orjut"]
-[ext_resource type="Script" uid="uid://dlhwvqsm4wi45" path="res://Scripts/Dynamic Object/dynamic_object_trigger.gd" id="6_71fls"]
+[ext_resource type="Script" uid="uid://can5okhlrlpxg" path="res://Scripts/Dynamic Object/dynamic_object_action.gd" id="4_qr772"]
+[ext_resource type="Script" uid="uid://dlhwvqsm4wi45" path="res://Scripts/Dynamic Object/dynamic_object_trigger.gd" id="5_846hx"]
 
-[sub_resource type="Resource" id="Resource_846hx"]
-script = ExtResource("5_orjut")
-metadata/_custom_type_script = "uid://dcql54jt4ppmt"
-
-[sub_resource type="Resource" id="Resource_6uiye"]
-script = ExtResource("6_71fls")
+[sub_resource type="Resource" id="Resource_27sub"]
+script = ExtResource("5_846hx")
+event_type = 1
 metadata/_custom_type_script = "uid://dlhwvqsm4wi45"
 
-[sub_resource type="Resource" id="Resource_pvptw"]
+[sub_resource type="Resource" id="Resource_orjut"]
+script = ExtResource("5_846hx")
+metadata/_custom_type_script = "uid://dlhwvqsm4wi45"
+
+[sub_resource type="Resource" id="Resource_71fls"]
 script = ExtResource("3_846hx")
 name = "Idle"
-triggers = Array[ExtResource("6_71fls")]([SubResource("Resource_6uiye")])
-actions = Array[ExtResource("4_27sub")]([SubResource("Resource_846hx"), null])
-metadata/_custom_type_script = "uid://vbad887e416a"
+triggers = Array[ExtResource("5_846hx")]([SubResource("Resource_27sub"), SubResource("Resource_orjut")])
+
+[sub_resource type="Resource" id="Resource_qr772"]
+script = ExtResource("3_846hx")
+name = "New state"
+
+[sub_resource type="Resource" id="Resource_846hx"]
+script = ExtResource("3_846hx")
+name = "New state"
+
+[sub_resource type="Resource" id="Resource_1drnh"]
+script = ExtResource("3_846hx")
+name = "New state"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wloi7"]
 animations = [{
@@ -43,7 +53,7 @@ script = ExtResource("1_d23p1")
 
 [node name="DynamicObjectStateMachine" type="Node2D" parent="."]
 script = ExtResource("2_k7dj1")
-states = Array[ExtResource("3_846hx")]([SubResource("Resource_pvptw")])
+states = Array[ExtResource("3_846hx")]([SubResource("Resource_71fls"), SubResource("Resource_qr772"), SubResource("Resource_846hx"), SubResource("Resource_1drnh")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wloi7")

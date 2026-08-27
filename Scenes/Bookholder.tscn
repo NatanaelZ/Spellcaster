@@ -1,8 +1,11 @@
-[gd_scene load_steps=66 format=3 uid="uid://bmmphgxsaisaa"]
+[gd_scene load_steps=72 format=3 uid="uid://bmmphgxsaisaa"]
 
 [ext_resource type="PackedScene" uid="uid://kvt7bdbcx8n0" path="res://Scenes/dynamic_object.tscn" id="1_bn0fe"]
+[ext_resource type="Script" uid="uid://vbad887e416a" path="res://Scripts/Dynamic Object/dynamic_object_state.gd" id="2_di12x"]
 [ext_resource type="Texture2D" uid="uid://d14sq4c6lxt3t" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToKill/Bed-1.png" id="2_nrpkq"]
 [ext_resource type="Texture2D" uid="uid://c3gy5bmnut7gp" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToKill/Bed-2.png" id="3_0q2u5"]
+[ext_resource type="Script" uid="uid://can5okhlrlpxg" path="res://Scripts/Dynamic Object/dynamic_object_action.gd" id="3_k0itd"]
+[ext_resource type="Script" uid="uid://dlhwvqsm4wi45" path="res://Scripts/Dynamic Object/dynamic_object_trigger.gd" id="4_8xe0n"]
 [ext_resource type="Texture2D" uid="uid://dctbf8dr4pd6" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToKill/Bed-3.png" id="4_di12x"]
 [ext_resource type="Texture2D" uid="uid://cv8amr3bugalp" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToKill/Bed-4.png" id="5_k0itd"]
 [ext_resource type="Texture2D" uid="uid://dbtumicevyvkk" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToKill/Bed-5.png" id="6_8xe0n"]
@@ -64,6 +67,18 @@
 [ext_resource type="Texture2D" uid="uid://bdr6kc6okfv0u" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToNormal/Bed-13 (1).png" id="62_mogwe"]
 [ext_resource type="Texture2D" uid="uid://y7kwe8spw322" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToNormal/Bed-14 (1).png" id="63_8vr0d"]
 [ext_resource type="Texture2D" uid="uid://cjilrpe8s5nqe" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToNormal/Bed-15 (1).png" id="64_615oh"]
+
+[sub_resource type="Resource" id="Resource_brl8d"]
+script = ExtResource("2_di12x")
+metadata/_custom_type_script = "uid://vbad887e416a"
+
+[sub_resource type="Resource" id="Resource_472n0"]
+script = ExtResource("2_di12x")
+metadata/_custom_type_script = "uid://vbad887e416a"
+
+[sub_resource type="Resource" id="Resource_us04v"]
+script = ExtResource("2_di12x")
+metadata/_custom_type_script = "uid://vbad887e416a"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hc1mf"]
 animations = [{
@@ -276,18 +291,16 @@ animations = [{
 }]
 
 [node name="Bookholder" instance=ExtResource("1_bn0fe")]
-vision_behaviour_enabled = true
-seen_animation = "SwitchToNormal"
-unseen_animation = "SwitchToKill"
-delay_animation_unseen = 5.0
-activate_after_unseen = true
 
-[node name="AnimatedSprite2D" parent="." index="0"]
+[node name="DynamicObjectStateMachine" parent="." index="0"]
+states = Array[ExtResource("2_di12x")]([SubResource("Resource_brl8d"), SubResource("Resource_472n0"), SubResource("Resource_us04v")])
+
+[node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_hc1mf")
 animation = &"SwitchToNormal"
 autoplay = "Idle"
 
-[node name="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" parent="." index="2"]
 position = Vector2(-78, 202)
 
 [node name="CollisionShape2D" parent="VisionDetector" index="0"]

@@ -10,6 +10,8 @@ func _can_handle(object: Object) -> bool:
 		if (selected_nodes.size() == 1 && selected_nodes[0] is DynamicObjectStateMachine) :
 			machine_state = selected_nodes[0]
 			return true
+	if object is DynamicObjectStateMachine:
+		return true
 	return false
 
 
@@ -28,11 +30,14 @@ func _parse_property(object: Object, type: Variant.Type, name: String, hint: Pro
 	# 			return true
 	
 	if name == "animation_name":
-		print("in")
-		var animated_sprite = machine_state.get_parent().get_component("AnimatedSprite2D")
+		var animated_sprite = machine_state.get_parent().get_node("AnimatedSprite2D")
 		var animations = DotExtractors.extract_animations(animated_sprite)
-		add_property_editor(name, CustomPropertyDropdown.new(object, animations))
+		print(animations)
+		add_property_editor(name, CustomPropertyDropdown.new(animations))
 		return true
+
+	if name == "states":
+		add_property_editor(name, DotCustomStatesDisplay.new())
 	return false
 
 
