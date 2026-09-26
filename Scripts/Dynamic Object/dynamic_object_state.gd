@@ -4,3 +4,4 @@ extends Resource
 @export var name: String
 @export var triggers : Array[DynamicObjectTrigger]
 @export var actions : Array[DynamicObjectAction]
+@export var conditions : Array[DynamicObjectAction]

@@ -24,10 +24,12 @@ func _process(_delta: float):
 
 	dropdown.clear()
 	dropdown.auto_translate_mode = Control.AUTO_TRANSLATE_MODE_DISABLED
-	dropdown.add_item("[Aucune]", 0)
-	
-	for item in items:
-		dropdown.add_item(item)
+
+	if (items.size() == 0) :
+		dropdown.add_item("None", 0)
+	else :
+		for item in items:
+			dropdown.add_item(item)
 
 	var current_val = obj.get(get_edited_property())
 	for i in dropdown.item_count:
@@ -37,4 +39,4 @@ func _process(_delta: float):
 
 func _on_selected(index: int):
 	var text = dropdown.get_item_text(index)
-	emit_changed(get_edited_property(), text if text != "[Aucune]" else "")
+	emit_changed(get_edited_property(), text)

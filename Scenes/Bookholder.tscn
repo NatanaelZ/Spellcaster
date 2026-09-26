@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://bmmphgxsaisaa"]
+[gd_scene load_steps=80 format=3 uid="uid://bmmphgxsaisaa"]
 
 [ext_resource type="PackedScene" uid="uid://kvt7bdbcx8n0" path="res://Scenes/dynamic_object.tscn" id="1_bn0fe"]
 [ext_resource type="Script" uid="uid://vbad887e416a" path="res://Scripts/Dynamic Object/dynamic_object_state.gd" id="2_di12x"]
@@ -7,8 +7,10 @@
 [ext_resource type="Script" uid="uid://can5okhlrlpxg" path="res://Scripts/Dynamic Object/dynamic_object_action.gd" id="3_k0itd"]
 [ext_resource type="Script" uid="uid://dlhwvqsm4wi45" path="res://Scripts/Dynamic Object/dynamic_object_trigger.gd" id="4_8xe0n"]
 [ext_resource type="Texture2D" uid="uid://dctbf8dr4pd6" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToKill/Bed-3.png" id="4_di12x"]
+[ext_resource type="Script" uid="uid://dcql54jt4ppmt" path="res://Scripts/Dynamic Object/play_animation_action.gd" id="4_k0itd"]
 [ext_resource type="Texture2D" uid="uid://cv8amr3bugalp" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToKill/Bed-4.png" id="5_k0itd"]
 [ext_resource type="Texture2D" uid="uid://dbtumicevyvkk" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToKill/Bed-5.png" id="6_8xe0n"]
+[ext_resource type="Script" uid="uid://dbyptx1xsvime" path="res://Scripts/Dynamic Object/dynamic_object_timer_config.gd" id="6_k0itd"]
 [ext_resource type="Texture2D" uid="uid://csy2stmuqg0kq" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToKill/Bed-6.png" id="7_brl8d"]
 [ext_resource type="Texture2D" uid="uid://77oxcx826pop" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToKill/Bed-7.png" id="8_472n0"]
 [ext_resource type="Texture2D" uid="uid://dh8yhfd3kulp7" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToKill/Bed-8.png" id="9_us04v"]
@@ -52,7 +54,6 @@
 [ext_resource type="Texture2D" uid="uid://iji6ksf2qwt3" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToKill/Bed-46.png" id="47_c18md"]
 [ext_resource type="Texture2D" uid="uid://ef4j7tw8eicx" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToKill/Bed-47.png" id="48_lm2h7"]
 [ext_resource type="Texture2D" uid="uid://cxt8u8mh24y8y" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToKill/Bed-48.png" id="49_oufn4"]
-[ext_resource type="Texture2D" uid="uid://bd7oer78iyhs6" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToNormal/Bed-1 (1).png" id="50_ppdw6"]
 [ext_resource type="Texture2D" uid="uid://c8rmwb63byp0m" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToNormal/Bed-2 (1).png" id="51_2rstr"]
 [ext_resource type="Texture2D" uid="uid://dvv1oj8xrbpx4" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToNormal/Bed-3 (1).png" id="52_pjwu8"]
 [ext_resource type="Texture2D" uid="uid://cfuvbiuu3oxxa" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToNormal/Bed-4 (1).png" id="53_21l1d"]
@@ -68,17 +69,59 @@
 [ext_resource type="Texture2D" uid="uid://y7kwe8spw322" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToNormal/Bed-14 (1).png" id="63_8vr0d"]
 [ext_resource type="Texture2D" uid="uid://cjilrpe8s5nqe" path="res://Graphics/Environnement/Objets/Bookholder/SwitchToNormal/Bed-15 (1).png" id="64_615oh"]
 
-[sub_resource type="Resource" id="Resource_brl8d"]
-script = ExtResource("2_di12x")
-metadata/_custom_type_script = "uid://vbad887e416a"
+[sub_resource type="Resource" id="Resource_k0itd"]
+script = ExtResource("4_k0itd")
+animation_name = "Idle"
 
-[sub_resource type="Resource" id="Resource_472n0"]
+[sub_resource type="Resource" id="Resource_8xe0n"]
+script = ExtResource("6_k0itd")
+timer_duration = 5.0
+start_conditions = Array[int]([1])
+block_conditions = Array[int]([0])
+
+[sub_resource type="Resource" id="Resource_iffph"]
+script = ExtResource("4_8xe0n")
+target_state = "SwitchToKill"
+event_type = 3
+timer_config = SubResource("Resource_8xe0n")
+
+[sub_resource type="Resource" id="Resource_jjhi8"]
 script = ExtResource("2_di12x")
-metadata/_custom_type_script = "uid://vbad887e416a"
+name = "Idle"
+triggers = Array[ExtResource("4_8xe0n")]([SubResource("Resource_iffph")])
+actions = Array[ExtResource("3_k0itd")]([SubResource("Resource_k0itd")])
+conditions = null
 
 [sub_resource type="Resource" id="Resource_us04v"]
+script = ExtResource("4_k0itd")
+animation_name = "SwitchToKill"
+metadata/_custom_type_script = "uid://dcql54jt4ppmt"
+
+[sub_resource type="Resource" id="Resource_qpexn"]
+script = ExtResource("4_8xe0n")
+target_state = "SwitchToNormal"
+
+[sub_resource type="Resource" id="Resource_png21"]
 script = ExtResource("2_di12x")
-metadata/_custom_type_script = "uid://vbad887e416a"
+name = "SwitchToKill"
+triggers = Array[ExtResource("4_8xe0n")]([SubResource("Resource_qpexn")])
+actions = Array[ExtResource("3_k0itd")]([SubResource("Resource_us04v")])
+
+[sub_resource type="Resource" id="Resource_wufob"]
+script = ExtResource("4_k0itd")
+animation_name = "SwitchToNormal"
+metadata/_custom_type_script = "uid://dcql54jt4ppmt"
+
+[sub_resource type="Resource" id="Resource_yi4u1"]
+script = ExtResource("4_8xe0n")
+target_state = "Idle"
+event_type = 2
+
+[sub_resource type="Resource" id="Resource_wlo5i"]
+script = ExtResource("2_di12x")
+name = "SwitchToNormal"
+triggers = Array[ExtResource("4_8xe0n")]([SubResource("Resource_yi4u1")])
+actions = Array[ExtResource("3_k0itd")]([SubResource("Resource_wufob")])
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hc1mf"]
 animations = [{
@@ -241,9 +284,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("50_ppdw6")
-}, {
-"duration": 1.0,
 "texture": ExtResource("51_2rstr")
 }, {
 "duration": 1.0,
@@ -287,18 +327,22 @@ animations = [{
 }],
 "loop": false,
 "name": &"SwitchToNormal",
-"speed": 12.0
+"speed": 15.0
 }]
 
 [node name="Bookholder" instance=ExtResource("1_bn0fe")]
 
 [node name="DynamicObjectStateMachine" parent="." index="0"]
-states = Array[ExtResource("2_di12x")]([SubResource("Resource_brl8d"), SubResource("Resource_472n0"), SubResource("Resource_us04v")])
+position = Vector2(0, 1)
+initial_state_name = "Idle"
+states = Array[ExtResource("2_di12x")]([SubResource("Resource_jjhi8"), SubResource("Resource_png21"), SubResource("Resource_wlo5i")])
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_hc1mf")
 animation = &"SwitchToNormal"
 autoplay = "Idle"
+frame = 13
+frame_progress = 1.0
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2(-78, 202)

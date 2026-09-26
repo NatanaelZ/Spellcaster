@@ -3,7 +3,10 @@ class_name DynamicObject
 
 func get_component(type: StringName) -> Node:
 	for child in get_children():
-		if child.is_class(type):
+		var script = child.get_script()
+		if script and script.get_global_name() == type:
+			return child
+		if child.is_class(type):  # fallback pour les classes natives
 			return child
 	return null
 

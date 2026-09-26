@@ -29,15 +29,24 @@ func _parse_property(object: Object, type: Variant.Type, name: String, hint: Pro
 	# 		if name in toggle.get_group_properties():
 	# 			return true
 	
-	if name == "animation_name":
-		var animated_sprite = machine_state.get_parent().get_node("AnimatedSprite2D")
-		var animations = DotExtractors.extract_animations(animated_sprite)
-		print(animations)
-		add_property_editor(name, CustomPropertyDropdown.new(animations))
+	# if name == "animation_name":
+	# 	var animated_sprite = machine_state.get_parent().get_node("AnimatedSprite2D")
+	# 	var animations = DotExtractors.extract_animations(animated_sprite)
+	# 	print(animations)
+	# 	add_property_editor(name, CustomPropertyDropdown.new(animations))
+	# 	return true
+
+	if name == "initial_state_name":
+		var state_names: Array[String] = []
+		for state in object.states:
+			state_names.append(state.name)
+		add_property_editor(name, CustomPropertyDropdown.new(state_names))
 		return true
 
 	if name == "states":
 		add_property_editor(name, DotCustomStatesDisplay.new())
+		return true
+
 	return false
 
 

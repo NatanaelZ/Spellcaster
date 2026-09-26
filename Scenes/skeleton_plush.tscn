@@ -257,18 +257,13 @@ animations = [{
 }]
 
 [node name="SkeletonPlush" instance=ExtResource("1_mrsce")]
-vision_behaviour_enabled = true
-seen_animation = "Detected"
-unseen_animation_intro = "Getting Up"
-unseen_animation = "Dancing"
-activate_after_unseen = true
 
-[node name="AnimatedSprite2D" parent="." index="0"]
+[node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_1f13l")
 animation = &"Getting Up"
 autoplay = "Idle"
 
-[node name="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" parent="." index="2"]
 disabled = true
 
 [node name="CollisionShape2D" parent="VisionDetector" index="0"]
